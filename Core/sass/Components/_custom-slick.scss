@@ -1,0 +1,111 @@
+.slick-initialized {
+	.slick-slide {
+		outline: 0;
+	}
+
+	.slick-arrow {
+		display: inline-block;
+		color: $primary;
+		font-size: 3em;
+		line-height: 55%;
+		width: 30px;
+		height: 30px;
+		padding-bottom: 3px;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		z-index: 1;
+		position: absolute;
+		top: 50%;
+		bottom: initial;
+		border-radius: 100%;
+		transform: translate(0, -50%);
+		transition: all 0.3s linear;
+
+		&.arrow-prev {
+			left: -8px;
+			right: initial;
+		}
+
+		&.arrow-next {
+			right: -8px;
+			left: initial;
+		}
+
+		&:hover {
+			color: $secondary;
+		}
+	}
+}
+
+.slick-slider {
+	.slick-dots {
+		bottom: 5px;
+		left: 0;
+		right: 0;
+
+		li {
+			width: auto;
+			height: auto;
+			vertical-align: middle;
+			margin: 0 4px;
+
+			button {
+				background-color: $white;
+				width: 8px;
+				height: 8px;
+				padding: 0;
+				display: table;
+				opacity: 0.5;
+				border-radius: 100%;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			&.slick-active {
+				button {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.slick-dotted {
+	&.slick-slider {
+		margin: 0;
+	}
+}
+
+.hero-banner {
+	.slick-dots {
+		bottom: 4%;
+		
+		@include breakpoint(wide) {
+			bottom: 3%;
+		}
+
+		li {
+			button {
+				width: 24px;
+				height: 2px;
+				border-radius: 0;
+				background-color: rgba(0, 0, 0, 0.2);
+				box-shadow: 0 1px 15px rgba(54,54,54,0.8);
+
+				@include breakpoint(wide) {
+					width: 40px;
+					height: 2px;
+				}
+			}
+
+			&.slick-active {
+				button {
+					background-color: $white;
+				}
+			}
+		}
+	}
+}

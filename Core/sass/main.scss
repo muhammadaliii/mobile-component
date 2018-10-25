@@ -1,0 +1,35 @@
+@import "bourbon";
+
+/* ABSTRACTS */
+@import
+	'Abstracts/variables',
+	'Abstracts/functions',
+	'Abstracts/mixins',
+	'Abstracts/placeholders';
+
+/* BASE */
+@import
+	'base/fonts',
+	'base/reset',
+	'base/helper';
+
+/* COMPONENT */
+@import
+	'Components/buttons',
+	'Components/loader-page',
+	'Components/animation',
+	'Components/datepicker',
+	'Components/form',
+	'Components/custom-select2',
+	'Components/custom-slick',
+	'Components/burger-menu';
+
+/* PAGE */
+@import
+	'pages/home';
+
+/* LAYOUT */
+@import
+	'Layout/header',
+	'Layout/container',
+	'Layout/footer';

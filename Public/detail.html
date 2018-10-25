@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="robots" content="index, follow" />
+		<title>Mobile Component</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+
+		<!-- CSS FOR PRODUCTION -->
+		<!-- <link href="assets/css/css-prod.min.css" rel="stylesheet"> -->
+
+		<!-- CSS FOR DEVELOPMENT -->
+		<link href="assets/css/vendor.min.css" rel="stylesheet">
+		<link href="assets/css/plugins.min.css" rel="stylesheet">
+		<link href="assets/css/main.css" rel="stylesheet">
+	</head>
+
+    <body>
+
+		<header class="header-fix">
+		<nav class="header-menu row">
+			<div class="col-xs-6 side">
+				<h1 class="brand-logo">
+					<a href="index.html">
+						<span class="logo"></span>
+						<strong>Mobile Component</strong>
+					</a>
+				</h1>
+			</div>
+			<div class="col-xs-6 side right">
+				<a href="#" class="button-action">
+					<i class="fa fa-ellipsis-v"></i>
+				</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="hero-banner component">
+			<div class="slider-wrapper">
+				<div class="slider-banner" style="background-image: url('assets/img/banner/img-resto1.jpg');"></div>
+				<div class="slider-banner" style="background-image: url('assets/img/banner/img-resto2.jpg');"></div>
+			</div>
+			<div class="filter-area">
+				<form action="" class="form-area">
+					<div class="form-group">
+						<select class="custom-dropdown form-control" name="location[]" placeholder="Lokasi">
+							<option>Lokasi Rumah Sakit / Klinik</option>
+							<option value="JT">Jakarta Timur</option>
+							<option value="JS">Jakarta Selatan</option>
+							<option value="JB">Jakarta Barat</option>
+							<option value="JP">Jakarta Pusat</option>
+							<option value="BK">Bekasi</option>
+							<option value="BG">Bogor</option>
+							<option value="TG">Tanggerang</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select class="custom-dropdown form-control" name="doctor[]" placeholder="Spesialisasi Dokter">
+							<option>Spesialisasi Dokter</option>
+							<option value="DG">Dokter Gigi</option>
+							<option value="DU">Dokter Umum</option>
+							<option value="DB">Dokter Bedah</option>
+							<option value="DK">Dokter Kandungan</option>
+							<option value="DT">Dokter THT</option>
+							<option value="DJ">Dokter Jaga</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="input-group date" data-provide="datepicker">
+							<input type="text" class="form-control" placeholder="Pilih Tanggal">
+							<div class="input-group-addon">
+								<span class="fa fa-calendar"></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="button solid">Cari</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="menu-navigation component">
+			<div class="container-fluid">
+				<div class="title-section text-center">
+					<h3>Menu Navigation</h3>
+					<h6>Subtitle</h6>
+				</div>
+				<div class="row">
+					<div class="col-xs-4">
+						<a href="#">
+							<div class="box">
+								<img src="assets/img/icon/icon-plane.svg" alt="">
+								<span>Pesawat</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="#">
+							<div class="box">
+								<img src="assets/img/icon/icon-hotel.svg" alt="">
+								<span>Hotel</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="#">
+							<div class="box">
+								<img src="assets/img/icon/icon-train.svg" alt="">
+								<span>Kereta Api</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="#">
+							<div class="box">
+								<img src="assets/img/icon/icon-plane.svg" alt="">
+								<span>Pesawat</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="#">
+							<div class="box">
+								<img src="assets/img/icon/icon-hotel.svg" alt="">
+								<span>Hotel</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a href="#">
+							<div class="box">
+								<img src="assets/img/icon/icon-train.svg" alt="">
+								<span>Kereta Api</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card-slider component">
+			<div class="container-fluid">
+				<div class="title-section text-center">
+					<h3>Promo Spesial Kami!</h3>
+				</div>
+				<div class="slider-area">
+					<div class="slider-wrapper">
+						<div class="slider-content card" style="background-image: url('assets/img/banner/img-banner-promo-detail.jpg');">
+							<a href="#" class="click-area"></a>
+						</div>
+						<div class="slider-content card" style="background-image: url('assets/img/banner/img-banner-promo.jpg');">
+							<a href="#" class="click-area"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="thumb-slider component">
+			<div class="container-fluid">
+				<div class="title-section text-center">
+					<h3>Kenapa Medika App?</h3>
+				</div>
+				<div class="slider-area">
+					<div class="slider-wrapper">
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<div class="image" style="background-image: url('assets/img/banner/img-resto1.jpg');"></div>
+								</div>
+								<div class="desc-area">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+								<a href="#" class="click-area"></a>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<div class="image" style="background-image: url('assets/img/banner/img-resto2.jpg');"></div>
+								</div>
+								<div class="desc-area">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+								<a href="#" class="click-area"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+		
+		<!-- JS FOR PRODUCTION -->
+		<!-- <script src="assets/js/js-prod.min.js" ></script> -->
+
+		<!-- JS FOR DEVELOPMENT -->
+		<script src="assets/js/vendor.min.js" ></script>
+		<script src="assets/js/plugins.min.js" ></script>
+		<script src="assets/js/app.min.js" ></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,113 @@
+// FONT FAMILY
+$font_idx: 1;
+$font_default: Helvetica, Arial, sans-serif !default;
+
+// Font Family Ex. (name, 'fonts/path')
+$font_family: (
+	museo-sans-300: 'fonts/museo-sans/museosans_300',
+	museo-sans-300-italic: 'fonts/museo-sans/museosans_300_italic',
+	museo-sans-500: 'fonts/museo-sans/museosans_500',
+	museo-sans-500-italic: 'fonts/museo-sans/museosans_500_italic',
+	museo-sans-700: 'fonts/museo-sans/museosans_700',
+	gilroy-medium: 'fonts/gilroy/gilroy-medium',
+	gilroy-black: 'fonts/gilroy/gilroy-black',
+	gilroy-black-italic: 'fonts/gilroy/gilroy-black-italic',
+	gilroy-heavy-italic: 'fonts/gilroy/gilroy-heavy-italic',
+);
+
+// BUTTONS
+// Default Button Ex. (button-class, background-code, font-color)
+$buttons:
+	('btn-red', #D9534F, #FFFFFF),
+	('btn-blue', #337AB7, #FFFFFF),
+	('btn-green', #5CB85C, #FFFFFF);
+
+// text-align
+$align: left center right;
+
+// vertical-align
+$vertical-align: top middle bottom;
+
+// float
+$float: left right;
+
+// position
+$position: top right bottom left;
+
+// media-query
+$media-query:
+	(imac-retina, (min-width: 2048px)),
+	(imac-large, (min-width: 1920px)),
+	(imac, (min-width: 1700px)),
+	(large-desktop, (min-width: 1500px)),
+	(laptop, (min-width: 1366px)),
+	(wide-laptop, (min-width: 1441px)),
+	(height-laptop, (max-height: 1200px)),
+	(desktop, (min-width: 1200px)),
+	(height-desktop, (min-height: 850px)),
+	(wide, (min-width: 992px)),
+	(width-tablet, (max-width: 992px)),
+	(width-tablet-portrait, (max-width: 768px)),
+	(tablet, (min-width: 768px)),
+	(mobile, (max-width: 767px)),
+	(small-mobile, (max-width: 360px));
+
+
+// Default color
+$white: #FFFFFF;
+$black: #000000;
+$primary-soft-grey: #e6e7e8;
+$primary-blue: #253e92;
+$primary-navy-blue: #246e78;
+$primary-orange: #e96362;
+$primary-pink: #cd4c50;
+$primary-yellow: #d6cc27;
+$primary-green: #00ad70;
+$primary-green-2: #69af5e;
+$primary-purple: #9b63b5;
+
+
+$primary: #3aace2;
+$secondary: #1c99d5;
+$text: #959595;
+$text-lighter: #b4b4b4;
+$text-darkgray: #808080;
+$text-darker: #010101;
+$text-purple: #839cb2;
+
+$border-gray: #d7d7d7;
+$border-soft-gray: #c9c6c6;
+$border-footer: #949494;
+
+$bg-default: #f0f6fc;
+$bg-soft-blue: #f0f6fc;
+$bg-semi-gray: #E5E6E8;
+$bg-dark-gray: #c5c5c5;
+$bg-semi-black: #474747;
+$bg-trans-grey: #E7E8E9;
+$dark-black: #1A1A1A;
+$box-highlight: #5d5d5f;
+
+$navy-blue: #2a4862;
+$red: #c00;
+$green: #2bb673;
+$tosca: #04a579;
+$cyan: #0d92c9;
+$yellow-2: #FDD943;
+$brown: #a62d27;
+$transparent: transparent;
+
+$facebook: #5d82d1;
+$twitter: #40bff5;
+$gplus: #d95946;
+$pinterest: #bd081c;
+$whatsapp: #5CB100;
+
+$bg-semigray: #e7e7e7;
+
+$red-orange: #ee4138;
+$white-smoke: #f5f5f5;
+$bg-dark: #676769;
+$bg-semi-gray: #ebebeb;
+$light-gray: #f7f7f7;
+$light-black: #4b4b4b;
