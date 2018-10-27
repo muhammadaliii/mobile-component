@@ -2,7 +2,7 @@
 	.select2-selection--single {
 		outline: 0;
 		height: auto;
-		border-color: #ccc;
+		border-color: $border-gray;
 		box-shadow: none;
 
 		.select2-selection__arrow {
@@ -15,24 +15,42 @@
 	.select2-search--dropdown {
 		.select2-search__field {
 			outline: 0;
-			border-color: #ccc;
+			border-color: $border-gray;
 		}
 	}
 }
 
 .select2-container {
 	.select2-selection--single {
+		box-shadow: none;
+
 		.select2-selection__rendered {
-			padding: 8px 24px 8px 12px;
-			height: auto;
 			color: $text;
-			font-size: 14px;
 			line-height: 150%;
 		}
 	}
 }
 
 .select2-dropdown {
-	border-color: #ccc;
+	border-color: $border-gray;
 	color: $text;
+}
+
+
+
+.select2-container--bootstrap {
+	&.select2-container--focus,
+	&.select2-container--open {
+		.select2-selection {
+			box-shadow: none;
+		}
+	}
+
+	.select2-selection {
+		border-color: $border-gray;
+	}
+
+	.select2-selection--single {
+		height: 35px;
+	}
 }

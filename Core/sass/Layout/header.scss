@@ -2,35 +2,36 @@ body {
 	&.on-scroll {
 		.header-fix {
 			background-color: rgba(0, 0, 0, 0.8);
-			box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
 
-			// .brand-logo {
-			// 	a {
-			// 		padding: 0;
-			// 	}
+			.brand-logo {
+				.logo {
+					background-image: url('../img/logo-white.png');
+				}
+			}
 
-			// 	.logo {
-			// 		top: 0;
-			// 		width: 228px;
-			// 		height: 44px;
+			.header-menu {
+				&.logo-menu {
+					.button-action {
+						color: $white;
+					}
+				}
 
-			// 		@include breakpoint(tablet) {
-			// 			width: 269px;
-			// 			height: 52px;
-			// 		}
-			// 	}
-			// }
+				.action-nav {
+					.button-action {
+						color: $white;
+					}
+				}
 
-			// .header-menu {
-			// 	.edition {
-			// 		padding: 8px 0 0;
+				.title-toolbar {
+					h5 {
+						color: $white;
+					}
 
-			// 		@include breakpoint(tablet) {
-			// 			padding: 5px 0 0;
-			// 			font-size: 3em;
-			// 		}
-			// 	}
-			// }
+					h6 {
+						color: $white;
+					}
+				}
+			}
 		}
 	}
 }
@@ -43,6 +44,8 @@ body {
 	bottom: initial;
 	width: 100%;
 	z-index: 3;
+	background-color: $white;
+	box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
 	transition: all 0.3s linear;
 
 	.header-logo {
@@ -95,6 +98,66 @@ body {
 		display: table;
 		width: 100%;
 
+		&.logo-menu {
+			.button-action {
+				padding: 10px 16px;
+				font-size: 1.5em;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 160%;
+				height: 50px;
+			}
+		}
+
+		&.flex-menu {
+			display: flex;
+			align-items: center;
+
+			.action-nav {
+				min-width: 50px;
+
+				.button-action {
+					padding: 10px 16px;
+					font-size: 1.4em;
+					display: block;
+					height: 50px;
+					line-height: 130%;
+					transition: all 0.3s linear;
+
+					&.back {
+						font-size: 2em;
+						line-height: 90%;
+					}
+				}
+			}
+
+			.title-toolbar {
+				padding: 0 10px;
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1 1;
+
+				h5 {
+					font-family: 'opensans-semibold';
+					color: $black;
+					font-size: 16px;
+					margin: 0;
+					transition: all 0.3s linear;
+
+					+ h6 {
+						margin: 4px 0 0;
+					}
+				}
+
+				h6 {
+					font-size: 11px;
+					color: $text-darkgray;
+					margin: 0;
+					transition: all 0.3s linear;
+				}
+			}
+		}
+
 		.side {
 			&.right {
 				text-align: right;
@@ -102,13 +165,105 @@ body {
 			}
 		}
 
-		.button-action {
-			padding: 10px 16px;
-			font-size: 1.5em;
-			display: inline-block;
-			vertical-align: middle;
-			line-height: 160%;
-			height: 50px;
+		.title-toolbar {
+			&.center {
+				text-align: center;
+			}
+		}
+
+		.drawer-menu {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: initial;
+			display: block;
+			width: 100%;
+			overflow: auto;
+			background-color: #fcfdfe;
+			transform: translate3d(100%,0,0);
+			transition: transform .24s cubic-bezier(.33,.66,.66,1);
+
+			&.showing {
+				transform: translate3d(0,0,0);
+			}
+
+			.drawer-header {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: initial;
+				z-index: 3;
+				background-color: $white;
+				display: flex;
+				align-items: center;
+				box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
+
+				&.center {
+					text-align: center;
+				}
+
+				.hide-drawer {
+					font-size: 2em;
+					padding: 10px 16px;
+					display: block;
+					line-height: 90%;
+					height: 50px;
+				}
+
+				.icon-nav {
+					min-width: 50px;
+				}
+
+				h5 {
+					font-family: 'opensans-semibold';
+					color: $black;
+					font-size: 16px;
+					margin: 0;
+					padding: 0 10px;
+					-webkit-box-flex: 1;
+					-ms-flex: 1;
+					flex: 1 1;
+				}
+			}
+
+			.drawer-content {
+				padding: 20px 0;
+				position: absolute;
+				top: 50px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				overflow-x: hidden;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+
+				.list-group-item {
+					border-left: 0;
+					border-right: 0;
+					padding: 10px 32px 10px 16px;
+					border-color: $border-gray;
+
+					&:first-child,
+					&:last-child {
+						border-radius: 0;
+					}
+
+					.arrow-nav {
+						color: $text-darkgray;
+						position: absolute;
+						z-index: 1;
+						pointer-events: none;
+						top: 50%;
+						left: initial;
+						right: 16px;
+						bottom: initial;
+						font-size: 1.6em;
+						transform: translate(0, -50%);
+					}
+				}
+			}
 		}
 	}
 }

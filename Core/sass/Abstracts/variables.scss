@@ -4,15 +4,11 @@ $font_default: Helvetica, Arial, sans-serif !default;
 
 // Font Family Ex. (name, 'fonts/path')
 $font_family: (
-	museo-sans-300: 'fonts/museo-sans/museosans_300',
-	museo-sans-300-italic: 'fonts/museo-sans/museosans_300_italic',
-	museo-sans-500: 'fonts/museo-sans/museosans_500',
-	museo-sans-500-italic: 'fonts/museo-sans/museosans_500_italic',
-	museo-sans-700: 'fonts/museo-sans/museosans_700',
-	gilroy-medium: 'fonts/gilroy/gilroy-medium',
-	gilroy-black: 'fonts/gilroy/gilroy-black',
-	gilroy-black-italic: 'fonts/gilroy/gilroy-black-italic',
-	gilroy-heavy-italic: 'fonts/gilroy/gilroy-heavy-italic',
+	opensans-bold: 'fonts/opensans/opensans-bold/opensans-bold',
+	opensans-extrabold: 'fonts/opensans/opensans-extrabold/opensans-extrabold',
+	opensans-light: 'fonts/opensans/opensans-light/opensans-light',
+	opensans-regular: 'fonts/opensans/opensans-regular/opensans-regular',
+	opensans-semibold: 'fonts/opensans/opensans-semibold/opensans-semibold',
 );
 
 // BUTTONS
@@ -90,7 +86,7 @@ $box-highlight: #5d5d5f;
 
 $navy-blue: #2a4862;
 $red: #c00;
-$green: #2bb673;
+$green: #5cb85c;
 $tosca: #04a579;
 $cyan: #0d92c9;
 $yellow-2: #FDD943;

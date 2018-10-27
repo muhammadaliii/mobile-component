@@ -6,17 +6,21 @@
 	background-color: $red;
 }
 
+html {
+	&.no-overflow {
+		body {
+			overflow: hidden;
+		}
+	}
+}
+
 body {
 	font-size: 14px;
     color: $black;
-	font-family: 'museo-sans-500';
+	font-family: 'opensans-regular';
     background-color: transparent;
     position: relative;
     letter-spacing: 0.3pt;
-	
-	@include breakpoint(tablet) {
-		font-family: 'museo-sans-300';
-	}
 }
 
 p {
@@ -74,7 +78,7 @@ iframe {
 
 main {
 	display: block;
-	margin: 50px 0;
+	margin: 50px 0 60px;
 }
 
 .progressive-image {
@@ -106,7 +110,6 @@ main {
 
 	@include breakpoint(wide) {
 		padding: 0;
-		// max-width: 960px;
 	}
 }
 
@@ -237,12 +240,15 @@ h6 {
 }
 
 .title-section {
-	margin: 0 0 16px;
+	+ div {
+		margin: 16px 0 0;
+	}
 
 	h3 {
-		font-size: 1.4em;
+		font-size: 1.2em;
 		margin: 0;
 		color: $black;
+		font-family: 'opensans-bold';
 
 		+ h6 {
 			margin: 6px 0 0;

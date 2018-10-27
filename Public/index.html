@@ -26,19 +26,52 @@
     <body>
 
 		<header class="header-fix">
-		<nav class="header-menu row">
-			<div class="col-xs-6 side">
-				<h1 class="brand-logo">
-					<a href="index.html">
-						<span class="logo"></span>
-						<strong>Mobile Component</strong>
+		<nav class="header-menu logo-menu">
+			<div class="row">
+				<div class="col-xs-6 side">
+					<h1 class="brand-logo">
+						<a href="index.html">
+							<span class="logo"></span>
+							<strong>Mobile Component</strong>
+						</a>
+					</h1>
+				</div>
+				<div class="col-xs-6 side right">
+					<a href="javascript:void(0)" class="button-action drawer">
+						<i class="fa fa-ellipsis-v"></i>
 					</a>
-				</h1>
+				</div>
 			</div>
-			<div class="col-xs-6 side right">
-				<a href="#" class="button-action">
-					<i class="fa fa-ellipsis-v"></i>
-				</a>
+			<div class="drawer-menu" id="drawer-menu">
+				<div class="drawer-header center">
+					<a href="javascript:void(0)" class="icon-nav hide-drawer">
+						<i class="fa fa-angle-left"></i>
+					</a>
+					<h5>Menu</h5>
+					<span class="icon-nav"></span>
+				</div>
+				<div class="drawer-content">
+					<a href="javascript:void(0)" class="list-group-item">
+						Cras justo odio
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Dapibus ac facilisis in
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Morbi leo risus
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Porta ac consectetur ac
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Vestibulum at eros
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -49,41 +82,112 @@
 				<div class="slider-banner" style="background-image: url('assets/img/banner/img-resto1.jpg');"></div>
 				<div class="slider-banner" style="background-image: url('assets/img/banner/img-resto2.jpg');"></div>
 			</div>
+
 			<div class="filter-area">
 				<form action="" class="form-area">
-					<div class="form-group">
-						<select class="custom-dropdown form-control" name="location[]" placeholder="Lokasi">
-							<option>Lokasi Rumah Sakit / Klinik</option>
-							<option value="JT">Jakarta Timur</option>
-							<option value="JS">Jakarta Selatan</option>
-							<option value="JB">Jakarta Barat</option>
-							<option value="JP">Jakarta Pusat</option>
-							<option value="BK">Bekasi</option>
-							<option value="BG">Bogor</option>
-							<option value="TG">Tanggerang</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<select class="custom-dropdown form-control" name="doctor[]" placeholder="Spesialisasi Dokter">
-							<option>Spesialisasi Dokter</option>
-							<option value="DG">Dokter Gigi</option>
-							<option value="DU">Dokter Umum</option>
-							<option value="DB">Dokter Bedah</option>
-							<option value="DK">Dokter Kandungan</option>
-							<option value="DT">Dokter THT</option>
-							<option value="DJ">Dokter Jaga</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<div class="input-group date" data-provide="datepicker">
-							<input type="text" class="form-control" placeholder="Pilih Tanggal">
-							<div class="input-group-addon">
-								<span class="fa fa-calendar"></span>
+					<div class="custom-tabs">
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="active">
+								<a href="#doctor" aria-controls="doctor" role="tab" data-toggle="tab">Dokter</a>
+							</li>
+							<li>
+								<a href="#treatment" aria-controls="treatment" role="tab" data-toggle="tab">Perawatan</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="doctor">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<span class="fa fa-map-marker"></span>
+										</div>
+										<select class="custom-dropdown form-control" name="location[]">
+											<option>Lokasi Rumah Sakit / Klinik</option>
+											<option value="JT">Jakarta Timur</option>
+											<option value="JS">Jakarta Selatan</option>
+											<option value="JB">Jakarta Barat</option>
+											<option value="JP">Jakarta Pusat</option>
+											<option value="BK">Bekasi</option>
+											<option value="BG">Bogor</option>
+											<option value="TG">Tanggerang</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<span class="fa fa-stethoscope"></span>
+										</div>
+										<select class="custom-dropdown form-control" name="doctor[]">
+											<option>Spesialisasi Dokter</option>
+											<option value="DG">Dokter Gigi</option>
+											<option value="DU">Dokter Umum</option>
+											<option value="DB">Dokter Bedah</option>
+											<option value="DK">Dokter Kandungan</option>
+											<option value="DT">Dokter THT</option>
+											<option value="DJ">Dokter Jaga</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<div class="input-group-addon">
+											<span class="fa fa-calendar"></span>
+										</div>
+										<input type="text" class="form-control" placeholder="Pilih Tanggal">
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="button solid">Cari</button>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="treatment">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<span class="fa fa-stethoscope"></span>
+										</div>
+										<select class="custom-dropdown form-control" name="doctor[]">
+											<option>Spesialisasi Dokter</option>
+											<option value="DG">Dokter Gigi</option>
+											<option value="DU">Dokter Umum</option>
+											<option value="DB">Dokter Bedah</option>
+											<option value="DK">Dokter Kandungan</option>
+											<option value="DT">Dokter THT</option>
+											<option value="DJ">Dokter Jaga</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<span class="fa fa-map-marker"></span>
+										</div>
+										<select class="custom-dropdown form-control" name="location[]">
+											<option>Lokasi Rumah Sakit / Klinik</option>
+											<option value="JT">Jakarta Timur</option>
+											<option value="JS">Jakarta Selatan</option>
+											<option value="JB">Jakarta Barat</option>
+											<option value="JP">Jakarta Pusat</option>
+											<option value="BK">Bekasi</option>
+											<option value="BG">Bogor</option>
+											<option value="TG">Tanggerang</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<div class="input-group-addon">
+											<span class="fa fa-calendar"></span>
+										</div>
+										<input type="text" class="form-control" placeholder="Pilih Tanggal">
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="button solid">Cari</button>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<button type="submit" class="button solid">Cari</button>
 					</div>
 				</form>
 			</div>
@@ -179,8 +283,9 @@
 									<div class="image" style="background-image: url('assets/img/banner/img-resto1.jpg');"></div>
 								</div>
 								<div class="desc-area">
+									<h6>Lorem ipsum dolor sit amet!</h6>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua.</p>
+									tempor incididunt ut labore et dolore.</p>
 								</div>
 								<a href="#" class="click-area"></a>
 							</div>
@@ -191,10 +296,259 @@
 									<div class="image" style="background-image: url('assets/img/banner/img-resto2.jpg');"></div>
 								</div>
 								<div class="desc-area">
+									<h6>Lorem ipsum dolor sit amet!</h6>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua.</p>
+									tempor incididunt ut labore et dolore.</p>
 								</div>
 								<a href="#" class="click-area"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="logo-slider component">
+			<div class="container-fluid">
+				<div class="title-section text-center">
+					<h3>Partner Rumah Sakit</h3>
+				</div>
+				<div class="slider-area">
+					<div class="slider-wrapper">
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_dermaster.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_rsmulya.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_columbiaasia.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_prosmile.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_theaestetic.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_rsmulya.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_columbiaasia.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_prosmile.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_theaestetic.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_rsmulya.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_wanitaindonesia.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_rsmulya.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_columbiaasia.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_prosmile.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_theaestetic.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/hospital_partner/mcd_img_logo_rsmulya.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="logo-slider component">
+			<div class="container-fluid">
+				<div class="title-section text-center">
+					<h3>Partner Klinik</h3>
+				</div>
+				<div class="slider-area">
+					<div class="slider-wrapper">
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_bintang.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_bisnisindonesia.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_gatra.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_glitzmedia.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_investordaily.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_kaskus.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_jakartapost.jpg" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_kontan.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_koranjakarta.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_macroad.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_mediaindonesia.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_mix.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_netralnews.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_republika.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="slider-content text-center">
+							<div class="wrapper">
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_sindo.png" alt="">
+									</a>
+								</div>
+								<div class="image-area">
+									<a href="#">
+										<img src="assets/img/media_partner/mcd_img_media_swa.png" alt="">
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -204,7 +558,68 @@
 	</main>
 
 
-		
+		<footer>
+			<div class="info-download component">
+				<div class="container-fluid">
+					<div class="title-section text-center">
+						<h3>Download Medika App sekarang!</h3>
+					</div>
+					<div class="download-link">
+						<ul class="row">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="assets/img/mcd_button_appstore.png" alt="App Store">
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="assets/img/mcd_button_playstore.png" alt="Play Store">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="social-media component">
+				<div class="container-fluid">
+					<div class="social-media-link">
+						<a href="javascript:void(0)">
+							<i class="fa fa-instagram"></i>
+							<span>Instagram</span>
+						</a>
+						<a href="javascript:void(0)">
+							<i class="fa fa-facebook-square"></i>
+							<span>Facebook</span>
+						</a>
+						<a href="javascript:void(0)">
+							<i class="fa fa-twitter-square"></i>
+							<span>Twitter</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-copyright component">
+				<div class="container-fluid">
+					<ul class="flat">
+						<li>
+							<a href="javascript:void(0)">
+								<img src="assets/img/logo-white.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="assets/img/logo-white.png" alt="">
+							</a>
+						</li>
+					</ul>
+					<p class="copyright-info">Copyright © 2018 PT Medika Cipta Digital. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+
 		<!-- JS FOR PRODUCTION -->
 		<!-- <script src="assets/js/js-prod.min.js" ></script> -->
 
