@@ -1,7 +1,7 @@
 body {
 	&.on-scroll {
 		.header-fix {
-			background-color: rgba(0, 0, 0, 0.8);
+			background-color: $primary;
 
 			.brand-logo {
 				.logo {
@@ -31,6 +31,32 @@ body {
 						color: $white;
 					}
 				}
+
+				.header-menu-wrapper {
+					.title-toolbar {
+						h5 {
+							color: $white;
+						}
+
+						h6 {
+							color: $white;
+						}
+					}
+				}
+
+				.drawer-menu {
+					.icon-nav {
+						color: $white;
+					}
+
+					.drawer-header {
+						background-color: $primary;
+						
+						h5 {
+							color: $white;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -43,7 +69,7 @@ body {
 	right: 0;
 	bottom: initial;
 	width: 100%;
-	z-index: 3;
+	z-index: 5;
 	background-color: $white;
 	box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
 	transition: all 0.3s linear;
@@ -110,50 +136,52 @@ body {
 		}
 
 		&.flex-menu {
-			display: flex;
-			align-items: center;
+			.header-menu-wrapper {
+				display: flex;
+				align-items: center;
 
-			.action-nav {
-				min-width: 50px;
+				.action-nav {
+					min-width: 50px;
 
-				.button-action {
-					padding: 10px 16px;
-					font-size: 1.4em;
-					display: block;
-					height: 50px;
-					line-height: 130%;
-					transition: all 0.3s linear;
+					.button-action {
+						padding: 10px 16px;
+						font-size: 1.4em;
+						display: block;
+						height: 50px;
+						line-height: 130%;
+						transition: all 0.3s linear;
 
-					&.back {
-						font-size: 2em;
-						line-height: 90%;
-					}
-				}
-			}
-
-			.title-toolbar {
-				padding: 0 10px;
-				-webkit-box-flex: 1;
-				-ms-flex: 1;
-				flex: 1 1;
-
-				h5 {
-					font-family: 'opensans-semibold';
-					color: $black;
-					font-size: 16px;
-					margin: 0;
-					transition: all 0.3s linear;
-
-					+ h6 {
-						margin: 4px 0 0;
+						&.back {
+							font-size: 2em;
+							line-height: 90%;
+						}
 					}
 				}
 
-				h6 {
-					font-size: 11px;
-					color: $text-darkgray;
-					margin: 0;
-					transition: all 0.3s linear;
+				.title-toolbar {
+					padding: 0 10px;
+					-webkit-box-flex: 1;
+					-ms-flex: 1;
+					flex: 1 1;
+
+					h5 {
+						font-family: 'opensans-semibold';
+						color: $black;
+						font-size: 16px;
+						margin: 0;
+						transition: all 0.3s linear;
+
+						+ h6 {
+							margin: 4px 0 0;
+						}
+					}
+
+					h6 {
+						font-size: 11px;
+						color: $text-darkgray;
+						margin: 0;
+						transition: all 0.3s linear;
+					}
 				}
 			}
 		}
@@ -210,6 +238,12 @@ body {
 					display: block;
 					line-height: 90%;
 					height: 50px;
+
+					&.times {
+						font-size: 28px;
+						line-height: 100%;
+						font-weight: bold;
+					}
 				}
 
 				.icon-nav {

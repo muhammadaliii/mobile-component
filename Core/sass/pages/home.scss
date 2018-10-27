@@ -62,6 +62,18 @@
 					}
 				}
 
+				&:first-child {
+					a {
+						border-top-left-radius: 8px;
+					}
+				}
+
+				&:last-child {
+					a {
+						border-top-right-radius: 8px;
+					}
+				}
+
 				&.active {
 					a {
 						background-color: $white;
@@ -263,24 +275,6 @@
 			-ms-flex: 1;
 			flex: 1;
 
-			// &:before {
-			// 	content: "";
-			// 	width: 1px;
-			// 	position: absolute;
-			// 	top: 10px;
-			// 	bottom: 10px;
-			// 	right: 0;
-			// 	left: 0;
-			// 	left: initial;
-			// 	background-color: $white;
-			// }
-
-			// &:last-child {
-			// 	&:before {
-			// 		display: none;
-			// 	}
-			// }
-
 			span {
 				display: none;
 			}
@@ -329,6 +323,10 @@
 						+ p {
 							margin: 4px 0 0;
 						}
+					}
+
+					p {
+						color: $white;
 					}
 				}
 			}
@@ -556,6 +554,7 @@
 		.row {
 			overflow: hidden;
 			border-radius: 20px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 		}
 
 		.click-area {
@@ -638,7 +637,7 @@
 	}
 
 	.copyright-info {
-		font-size: 0.7em;
+		font-size: 0.6em;
 		color: $white;
 	}
 }
