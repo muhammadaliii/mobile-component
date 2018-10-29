@@ -1,12 +1,4 @@
 .datepicker {
-	.datepicker-switch {
-		&:hover {
-			background-color: transparent;
-		}
-	}
-}
-
-.datepicker-dropdown {
 	background-color: $white;
 	border: 0;
 	padding: 0;
@@ -14,6 +6,7 @@
 	box-shadow: 0 1px 10px rgba(0,0,0,0.2);
 
 	table {
+		width: 100%;
 		margin: 0 auto;
 		border-collapse: separate;
 		border-spacing: 10px;
@@ -30,27 +23,29 @@
 				padding: 0;
 				height: 27px;
 				width: 27px;
-				border-radius: 100%;
+				border-radius: 6px;
 
 				span {
 					height: 50px;
 					line-height: 50px;
-					border-radius: 100%;
+					border-radius: 6px;
 
 					&.active {
-						background: $secondary;
+						background: $primary;
 						color: $white;
 						border: 0;
+						text-shadow: none;
 						box-shadow: none;
 
 						&.active {
-							background: $secondary;
+							background: $primary;
 							color: $white;
+							text-shadow: none;
 						}
 
 						&:hover {
 							&.active {
-								background: $secondary;
+								background: $primary;
 								color: $white;	
 							}
 						}
@@ -58,12 +53,12 @@
 				}
 
 				&.today {
-					background: $secondary;
+					background: $green;
 					color: $white;
 
 					&:hover {
 						&:hover {
-							background: $secondary;
+							background: $green;
 							color: $white;	
 						}
 					}
@@ -73,11 +68,13 @@
 					background: $primary;
 					color: $white;
 					border: 0;
+					text-shadow: none;
 					box-shadow: none;
 
 					&.active {
 						background: $primary;
 						color: $white;
+						text-shadow: none;
 					}
 
 					&:hover {
@@ -107,5 +104,26 @@
 
 	&.date-sort {
 		padding: 58px 20px 20px;
+	}
+
+	.datepicker-switch {
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+.custom-datepicker-inline {
+	.datepicker-inline {
+		width: 100%;
+	}
+
+	.datepicker {
+		background-color: transparent;
+		box-shadow: none;
+
+		table {
+			width: 100%;
+		}
 	}
 }

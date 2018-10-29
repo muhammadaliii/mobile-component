@@ -60,7 +60,7 @@ body {
 				font-family: 'opensans-semibold';
 				color: $black;
 				text-align: center;
-				padding: 3px 0;
+				padding: 3px 30px;
 			}
 
 			.close {
@@ -70,7 +70,15 @@ body {
 				min-height: 0;
 				margin-top: -1px;
 				color: $primary;
+				outline: 0;
+				position: absolute;
+				z-index: 1;
+				top: 50%;
+				left: initial;
+				right: 16px;
+				bottom: initial;
 				text-shadow: none;
+				transform: translate(0, -50%);
 			}
 		}
 

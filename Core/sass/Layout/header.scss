@@ -59,6 +59,16 @@ body {
 				}
 			}
 		}
+
+		.show-overlay {
+			.header-overlay {
+				background-color: $primary;
+
+				h5 {
+					color: $white;
+				}
+			}
+		}
 	}
 }
 
@@ -298,6 +308,52 @@ body {
 					}
 				}
 			}
+		}
+	}
+}
+
+.show-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: initial;
+	right: 0;
+	height: 50px;
+	z-index: 10;
+
+	.header-overlay {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		background-color: $white;
+		box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
+
+		h5 {
+			font-size: 16px;
+			font-family: 'opensans-semibold';
+			color: $black;
+			width: 100%;
+			text-align: center;
+			margin: 0;
+			padding: 5px 36px;
+		}
+
+		.close {
+			opacity: 1;
+			font-size: 28px;
+			line-height: 100%;
+			min-height: 0;
+			margin-top: -1px;
+			color: $primary;
+			outline: 0;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: initial;
+			right: 16px;
+			bottom: initial;
+			text-shadow: none;
+			transform: translate(0, -50%);
 		}
 	}
 }
