@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="robots" content="index, follow" />
+		<title>Mobile Component</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+
+		<!-- CSS FOR PRODUCTION -->
+		<!-- <link href="assets/css/css-prod.min.css" rel="stylesheet"> -->
+
+		<!-- CSS FOR DEVELOPMENT -->
+		<link href="assets/css/vendor.min.css" rel="stylesheet">
+		<link href="assets/css/plugins.min.css" rel="stylesheet">
+		<link href="assets/css/main.css" rel="stylesheet">
+	</head>
+
+    <body>
+
+		<header class="header-fix">
+		<nav class="header-menu logo-menu">
+			<div class="row">
+				<div class="col-xs-6 side">
+					<h1 class="brand-logo">
+						<a href="index.html">
+							<span class="logo"></span>
+							<strong>Mobile Component</strong>
+						</a>
+					</h1>
+				</div>
+				<div class="col-xs-6 side right">
+					<a href="javascript:void(0)" class="button-action drawer">
+						<i class="fa fa-ellipsis-v"></i>
+					</a>
+				</div>
+			</div>
+			<div class="drawer-menu" id="drawer-menu-search">
+				<div class="drawer-header center">
+					<a href="javascript:void(0)" class="icon-nav hide-drawer">
+						<i class="fa fa-angle-left"></i>
+					</a>
+					<h5>Menu</h5>
+					<span class="icon-nav"></span>
+				</div>
+				<div class="drawer-content">
+					<a href="javascript:void(0)" class="list-group-item">
+						Cras justo odio
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Dapibus ac facilisis in
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Morbi leo risus
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Porta ac consectetur ac
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+					<a href="javascript:void(0)" class="list-group-item">
+						Vestibulum at eros
+						<i class="arrow-nav fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="input-otp component">
+			<div class="container-fluid">
+				<form action="">
+					<div class="form-group">
+						<div class="info-area">
+							<h5>
+								Kami telah mengirim kode OTP 4 digit ke nomer telpon:
+								<strong>+62 812 1234 5678</strong>
+							</h5>
+							<h5>Masukkan kode OTP</h5>
+						</div>
+						<div class="input-otp-area">
+							<input type="text" class="form-control" name="otp-code" id="input-otp">
+						</div>
+                    	<span class="pincode-callback"></span>
+					</div>
+					<div class="form-group button-area">
+						<button type="submit" class="button solid">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+				<!-- =========== POPUP FILTER =========== -->
+		<div class="custom modal fade" id="filter-modal" tabindex="-1" role="dialog" aria-labelledby="filter-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="filter-label">Filter</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-area">
+							<div class="list-group">
+								<h5 class="header-list">Lokasi</h5>
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<span class="fa fa-map-marker"></span>
+										</div>
+										<select class="custom-dropdown form-control" name="location[]">
+											<option>Lokasi Rumah Sakit / Klinik</option>
+											<option value="JT">Jakarta Timur</option>
+											<option value="JS">Jakarta Selatan</option>
+											<option value="JB">Jakarta Barat</option>
+											<option value="JP">Jakarta Pusat</option>
+											<option value="BK">Bekasi</option>
+											<option value="BG">Bogor</option>
+											<option value="TG">Tanggerang</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<span class="fa fa-stethoscope"></span>
+										</div>
+										<select class="custom-dropdown form-control" name="doctor[]">
+											<option>Spesialisasi Dokter</option>
+											<option value="DG">Dokter Gigi</option>
+											<option value="DU">Dokter Umum</option>
+											<option value="DB">Dokter Bedah</option>
+											<option value="DK">Dokter Kandungan</option>
+											<option value="DT">Dokter THT</option>
+											<option value="DJ">Dokter Jaga</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<h5 class="header-list">Tanggal</h5>
+								<div class="form-group">
+									<div class="input-group date">
+										<div class="input-group-addon">
+											<span class="fa fa-calendar"></span>
+										</div>
+										<input type="text" class="form-control" id="value-datepicker-filter" placeholder="Pilih Tanggal" data-toggle="modal" data-target="#datepicker-modal">
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<h5 class="header-list">Single Slider</h5>
+								<div class="form-group">
+									<div class="custom-rangeslider">
+										<input type="text" class="form-control single-range" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="0">
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<h5 class="header-list">Range Slider</h5>
+								<div class="form-group">
+									<div class="custom-rangeslider">
+										<input type="text" class="form-control range" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="0" data-slider-range="true">
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<h5 class="header-list">Checkbox</h5>
+								<div class="form-group">
+									<div class="pretty p-icon p-round p-smooth p-plain">
+										<input type="checkbox" />
+										<div class="state p-warning-o">
+											<i class="icon fa fa-star"></i>
+											<label>Favorite</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-smooth p-plain">
+										<input type="checkbox" />
+										<div class="state p-success-o">
+											<label>Monday</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-smooth p-plain">
+										<input type="checkbox" />
+										<div class="state p-success-o">
+											<label>Tuesday</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<h5 class="header-list">Radio button</h5>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>Male</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>Female</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>Special</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<div class="form-group button-area">
+									<button type="submit" class="button solid">Cari</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- =========== END POPUP FILTER =========== -->
+
+		<!-- =========== POPUP SORT =========== -->
+		<div class="custom modal fade" id="sort-modal" tabindex="-1" role="dialog" aria-labelledby="sort-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="sort-label">Urutkan</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-area">
+							<div class="list-group">
+								<h5 class="header-list">Radio button</h5>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>A-Z</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>Z-A</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>Lower Price</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pretty p-default p-round p-smooth">
+										<input type="radio" name="radio1">
+										<div class="state p-success-o">
+											<label>High Price</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<div class="form-group button-area">
+									<button type="submit" class="button solid">Cari</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- =========== END POPUP SORT =========== -->
+
+		<!-- =========== POPUP DATE =========== -->
+		<div class="custom modal fade" id="date-modal" tabindex="-1" role="dialog" aria-labelledby="date-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="date-label">Tanggal</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-area">
+							<div class="list-group">
+								<h5 class="header-list">Tanggal</h5>
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<div class="input-group-addon">
+											<span class="fa fa-calendar"></span>
+										</div>
+										<input type="text" class="form-control" placeholder="Pilih Tanggal">
+									</div>
+								</div>
+							</div>
+							<div class="list-group">
+								<div class="form-group button-area">
+									<button type="submit" class="button solid">Cari</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- =========== END POPUP DATE =========== -->
+
+		<!-- =========== POPUP DATEPICKER FILTER =========== -->
+		<div class="custom modal fade" id="datepicker-modal" tabindex="-1" role="dialog" aria-labelledby="date-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="date-label">Date</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-area">
+							<div class="list-group">
+								<div class="form-group">
+									<div id="datepicker-filter" class="custom-datepicker-inline"></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- =========== END POPUP DATEPICKER FILTER =========== -->
+
+		<!-- =========== POPUP DATEPICKER DOKTER =========== -->
+		<div class="custom modal fade" id="datepicker-doctor-modal" tabindex="-1" role="dialog" aria-labelledby="date-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="date-label">Date</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-area">
+							<div class="list-group">
+								<div class="form-group">
+									<div id="datepicker-doctor" class="custom-datepicker-inline"></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- =========== END POPUP DATEPICKER DOKTER =========== -->
+
+		<!-- =========== POPUP DATEPICKER TREATMENT =========== -->
+		<div class="custom modal fade" id="datepicker-treatment-modal" tabindex="-1" role="dialog" aria-labelledby="date-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="date-label">Date</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-area">
+							<div class="list-group">
+								<div class="form-group">
+									<div id="datepicker-treatment" class="custom-datepicker-inline"></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- =========== END POPUP DATEPICKER TREATMENT =========== -->		
+
+	</main>
+
+
+		<footer>
+			<div class="info-download component">
+				<div class="container-fluid">
+					<div class="title-section text-center">
+						<h3>Download Medika App sekarang!</h3>
+					</div>
+					<div class="download-link">
+						<ul class="row">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="assets/img/mcd_button_appstore.png" alt="App Store">
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="assets/img/mcd_button_playstore.png" alt="Play Store">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="social-media component">
+				<div class="container-fluid">
+					<div class="social-media-link">
+						<a href="javascript:void(0)">
+							<i class="fa fa-instagram"></i>
+							<span>Instagram</span>
+						</a>
+						<a href="javascript:void(0)">
+							<i class="fa fa-facebook-square"></i>
+							<span>Facebook</span>
+						</a>
+						<a href="javascript:void(0)">
+							<i class="fa fa-twitter-square"></i>
+							<span>Twitter</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-copyright component">
+				<div class="container-fluid">
+					<ul class="flat">
+						<li>
+							<a href="javascript:void(0)">
+								<img src="assets/img/logo-white.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="assets/img/logo-white.png" alt="">
+							</a>
+						</li>
+					</ul>
+					<p class="copyright-info">Copyright © 2018 PT Medika Cipta Digital. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- JS FOR PRODUCTION -->
+		<!-- <script src="assets/js/js-prod.min.js" ></script> -->
+
+		<!-- JS FOR DEVELOPMENT -->
+		<script src="assets/js/vendor.min.js" ></script>
+		<script src="assets/js/plugins.min.js" ></script>
+		<script src="assets/js/app.min.js" ></script>
+
+	</body>
+</html>
+

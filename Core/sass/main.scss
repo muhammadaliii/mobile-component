@@ -13,6 +13,10 @@
 	'base/reset',
 	'base/helper';
 
+/* PAGE */
+@import
+	'pages/home';
+
 /* COMPONENT */
 @import
 	'Components/buttons',
@@ -24,11 +28,8 @@
 	'Components/custom-slick',
 	'Components/custom-modal',
 	'Components/custom-range-slider',
+	'Components/otp',
 	'Components/burger-menu';
-
-/* PAGE */
-@import
-	'pages/home';
 
 /* LAYOUT */
 @import

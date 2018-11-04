@@ -1,0 +1,90 @@
+.input-otp {
+	padding: 40px 0 0;
+
+	.form-group {
+		+.button-area {
+			margin-top: 30px;
+		}
+	}
+
+	.info-area {
+		+ .input-otp-area {
+			margin: 20px 0 0;
+		}
+
+		h5 {
+			text-align: center;
+			font-size: 1.2em;
+			margin: 0;
+
+			+ h5 {
+				margin: 24px 0 0;
+			}
+
+			strong {
+				font-family: 'opensans-bold';
+				color: $primary;
+				display: block;
+				margin: 16px 0 0;
+			}
+		}
+	}
+
+	.input-otp-area {
+		text-align: center;
+	}
+
+	.pincode-callback {
+		display: block;
+		margin: 8px 0 0;
+
+		&.error {
+			color: $red;
+		}
+	}
+
+	.pincode-input-container {
+		// display: flex;
+		// align-items: center;
+		text-align: center;
+
+		&.touch {
+			.touchwrapper {
+				&.touch4 {
+					width: 140px;
+					height: 50px;
+					margin: 0;
+
+					input {
+						height: auto;
+						bottom: 0;
+					}
+				}
+
+				.touchtable {
+					border-collapse: separate;
+					border-spacing: 8px 0px;
+
+					td {
+						border-right: 0;
+						border-bottom: 1px solid $border-gray;
+					}
+				}
+			}
+		}
+
+		.pincode-input-text, 
+		.form-control {
+			&.pincode-input-text {
+				font-size: 1.6em;
+				height: auto;
+				padding: 12px 14px;
+				// padding: 12px 6px
+				background-color: transparent;
+				border: 0;
+				border-radius: 0;
+				box-shadow: none;
+			}
+		}
+	}
+}
